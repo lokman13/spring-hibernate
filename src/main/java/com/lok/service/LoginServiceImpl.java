@@ -10,7 +10,7 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
    private LoginDao logindao;
 
-    public void setLoginDAO(LoginDao loginDAO) {
+    public void setLoginDAO(LoginDao logindao) {
         this.logindao = logindao;
     }
 
