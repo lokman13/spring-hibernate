@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lokman
-  Date: 19/03/2018
-  Time: 21:37
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
@@ -56,7 +49,7 @@
             <div class="modal-footer">
                 <div class="col-md-12">
                     <span class="pull-left"><a href="#">Forgot Password?</a></span>
-                    <span><a href="#">Register</a></span>
+                    <span><a href="register">register</a></span>
                 </div>
             </div>
         </div>

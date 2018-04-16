@@ -6,7 +6,7 @@
     <title>INCS</title>
 </head>
 <body>
-<form action="/RedirectWebApp/registerSuccess" method="post">
+<form action="/login" method="post">
     <table>
 
         <tr>
@@ -28,7 +28,7 @@
         <tr>
             <td>Country</td>
             <td><select name="country">
-                <option value="India">India</option>
+                <option value="Algerie">Algerie</option>
                 <option value="US">US</option>
                 <option value="Other">Other</option>
             </select></td>

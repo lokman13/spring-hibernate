@@ -11,14 +11,14 @@ public class UserDAO {
     private static List<User> list = null;
     static{
         list = new ArrayList<User>();
-        list.add(new User("KK", 30, "kk.cs@gmail.com", "India"));
-        list.add(new User("Martin", 40, "martin.cs@gmail.com", "US"));
-        list.add(new User("Sean", 30, "sean.cs@gmail.com", "Canada"));
+        list.add(new User("Mohamed", 30, "mouhamed@gmail.com", "Algerie"));
+        list.add(new User("kk", 40, "kk@gmail.com", "US"));
+        list.add(new User("AAb", 30, "aab@gmail.com", "Canada"));
     }
     public List<User> getUserList() {
         return list;
     }
-    public void addUser(User user) {
+    public void addUser(User user) {:
         list.add(user);
     }
 }
