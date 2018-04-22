@@ -4,14 +4,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @Repository("loginDao")
 public class LoginDaoImpl implements LoginDao {
 
 
-    @Resource(name="sessionFactory")
     protected SessionFactory sessionFactory;
 
     public void setSessionFactory(SessionFactory sessionFactory) {

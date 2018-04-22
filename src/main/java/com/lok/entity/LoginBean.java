@@ -11,7 +11,8 @@ public class LoginBean {
     @NotEmpty
     @Size(min = 1, max = 20)
     private String password;
-
+    public LoginBean(String username, String password) {
+    }
     public String getUserName() {
         return userName;
     }

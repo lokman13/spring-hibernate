@@ -6,9 +6,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
-    @RequestMapping("home")
+    @RequestMapping("/home")
     public ModelAndView helloWord(){
-        String message = "H";
+        String message = "Hello World";
         return new ModelAndView("home", "message",message);
     }
 }
