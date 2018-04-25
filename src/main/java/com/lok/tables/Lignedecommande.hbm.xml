@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lok.tables.Lignedecommande" table="lignedecommande" schema="bdd">
+        <id name="idLigneDeCommande">
+            <column name="id_ligne_de_commande" sql-type="int(11)"/>
+        </id>
+        <property name="idPanier">
+            <column name="id_panier" sql-type="int(11)"/>
+        </property>
+        <property name="idCommande">
+            <column name="IdCommande" sql-type="int(11)"/>
+        </property>
+        <property name="idProduit">
+            <column name="idProduit" sql-type="int(11)"/>
+        </property>
+        <property name="quantitéCommande">
+            <column name="quantitéCommande" sql-type="int(50)"/>
+        </property>
+        <property name="prix">
+            <column name="prix" sql-type="int(20)"/>
+        </property>
+    </class>
+</hibernate-mapping>

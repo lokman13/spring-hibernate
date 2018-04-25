@@ -4,7 +4,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Inscription</title>
-    <script>
+
+</head>
+     <!--        <script>
         function validate()
         {
             var fullname = document.form.fullname.value;
@@ -79,6 +81,24 @@
         </tr>
     </table>
 </form>
+
+-->
+
+<body>
+<form name="form" action="RegisterServlet" method="post">
+    <table align="center">
+        <tr>
+            <td>Nom</td>
+            <td><input type="text" name="nom" /></td>
+        </tr>
+        <tr>
+            <td>Prenom</td>
+            <td><input type="text" name="prenom" /></td>
+        </tr>
+    <input type="submit" value="registrer!">
+    </table>
+</form>
+
 
 </body>
 

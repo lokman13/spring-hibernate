@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/bdd</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+
+        <mapping class="com.lok.tables.Categorie"/>
+        <mapping class="com.lok.tables.Client"/>
+        <mapping class="com.lok.tables.Commande"/>
+        <mapping class="com.lok.tables.EPaiement"/>
+        <mapping class="com.lok.tables.Enchere"/>
+        <mapping class="com.lok.tables.Facture"/>
+        <mapping class="com.lok.tables.Lignedecommande"/>
+        <mapping class="com.lok.tables.Lignedestock"/>
+        <mapping class="com.lok.tables.Livraison"/>
+        <mapping class="com.lok.tables.Paiement"/>
+        <mapping class="com.lok.tables.Paiementclassique"/>
+        <mapping class="com.lok.tables.Panier"/>
+        <mapping class="com.lok.tables.Produit"/>
+        <mapping class="com.lok.tables.Stock"/>
+        <mapping class="com.lok.tables.User"/>
+        <mapping class="com.lok.tables.Vendeur"/>
+        <mapping class="com.lok.tables.Vent"/>
+        <mapping class="com.lok.tables.Ventnrml"/>
+        <mapping resource="com/lok/tables/Categorie.hbm.xml"/>
+        <mapping resource="com/lok/tables/Client.hbm.xml"/>
+        <mapping resource="com/lok/tables/Commande.hbm.xml"/>
+        <mapping resource="com/lok/tables/EPaiement.hbm.xml"/>
+        <mapping resource="com/lok/tables/Enchere.hbm.xml"/>
+        <mapping resource="com/lok/tables/Facture.hbm.xml"/>
+        <mapping resource="com/lok/tables/Lignedecommande.hbm.xml"/>
+        <mapping resource="com/lok/tables/Lignedestock.hbm.xml"/>
+        <mapping resource="com/lok/tables/Livraison.hbm.xml"/>
+        <mapping resource="com/lok/tables/Paiement.hbm.xml"/>
+        <mapping resource="com/lok/tables/Paiementclassique.hbm.xml"/>
+        <mapping resource="com/lok/tables/Panier.hbm.xml"/>
+        <mapping resource="com/lok/tables/Produit.hbm.xml"/>
+        <mapping resource="com/lok/tables/Stock.hbm.xml"/>
+        <mapping resource="com/lok/tables/User.hbm.xml"/>
+        <mapping resource="com/lok/tables/Vendeur.hbm.xml"/>
+        <mapping resource="com/lok/tables/Vent.hbm.xml"/>
+        <mapping resource="com/lok/tables/Ventnrml.hbm.xml"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

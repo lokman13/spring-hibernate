@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lok.tables.Lignedestock" table="lignedestock" schema="bdd">
+        <id name="idLigneDeStock">
+            <column name="id_ligne_de_stock" sql-type="int(11)"/>
+        </id>
+        <property name="idProduit">
+            <column name="idProduit" sql-type="int(11)"/>
+        </property>
+        <property name="idStock">
+            <column name="idStock" sql-type="int(11)"/>
+        </property>
+        <property name="quantité">
+            <column name="quantité" sql-type="int(25)"/>
+        </property>
+    </class>
+</hibernate-mapping>

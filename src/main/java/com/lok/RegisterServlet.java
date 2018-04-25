@@ -1,7 +1,10 @@
 package com.lok;
 
-import com.lok.dao.RegisterDao;
-import com.lok.entity.RegisterBean;
+import com.lok.tables.User;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,29 +20,27 @@ public class RegisterServlet extends HttpServlet {
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String fullName = request.getParameter("fullname");
-        String email = request.getParameter("email");
-        String userName = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        RegisterBean registerBean = new RegisterBean();
-        registerBean.setFullName(fullName);
-        registerBean.setEmail(email);
-        registerBean.setUserName(userName);
-        registerBean.setPassword(password);
+        String fullName = request.getParameter("nom");
 
 
-        String userRegistered = RegisterDao.registerUser(registerBean);
+        String userName = request.getParameter("prenom");
 
-        if(userRegistered.equals("SUCCESS"))   //On success, you can display a message to user on Home page
-        {
-            request.getRequestDispatcher("/home.jsp").forward(request, response);
-        }
-        else   //On Failure, display a meaningful message to the User.
-        {
-            request.setAttribute("errMessage", userRegistered);
-            request.getRequestDispatcher("/register.jsp").forward(request, response);
+        Configuration cfg= new Configuration();
+        cfg.configure("META-INF/hibernate.cfg.xml");
+        SessionFactory factory= cfg.buildSessionFactory();
+        Session session=factory.openSession();
+        Transaction transaction= session.beginTransaction();
+
+        User user = new User();
+        user.setId(1);
+        user.setNom(fullName);
+        user.setPrenom(userName);
+
+        session.save(user);
+        transaction.commit();
+        session.close();
+        request.getRequestDispatcher("/register.jsp").forward(request, response);
         }
 
     }
-}
+

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lok.tables.Stock" table="stock" schema="bdd">
+        <id name="idStock">
+            <column name="idStock" sql-type="int(11)"/>
+        </id>
+        <property name="idVendeur">
+            <column name="idVendeur" sql-type="int(11)"/>
+        </property>
+        <property name="nomDuStock">
+            <column name="nom_du_stock" sql-type="varchar(20)" length="20"/>
+        </property>
+    </class>
+</hibernate-mapping>

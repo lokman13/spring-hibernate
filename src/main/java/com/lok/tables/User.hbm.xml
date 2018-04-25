@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lok.tables.User" table="user" schema="bdd">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="nom">
+            <column name="nom" sql-type="varchar(25)" length="25"/>
+        </property>
+        <property name="prenom">
+            <column name="prenom" sql-type="varchar(25)" length="25"/>
+        </property>
+    </class>
+</hibernate-mapping>

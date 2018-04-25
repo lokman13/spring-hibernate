@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lok.tables.Ventnrml" table="ventnrml" schema="bdd">
+        <id name="idVentNrml">
+            <column name="id_vent_nrml" sql-type="int(11)"/>
+        </id>
+        <property name="idVent">
+            <column name="id_vent" sql-type="int(11)"/>
+        </property>
+        <property name="nomArticle">
+            <column name="nomArticle" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="dateVent">
+            <column name="dateVent" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>

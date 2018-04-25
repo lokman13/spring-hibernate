@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lok.tables.EPaiement" table="e_paiement" schema="bdd">
+        <id name="idEPaiement">
+            <column name="id_e_paiement" sql-type="int(11)"/>
+        </id>
+        <property name="idCartBanque">
+            <column name="idCart_Banque" sql-type="int(11)"/>
+        </property>
+        <property name="codePin">
+            <column name="code_pin" sql-type="int(20)"/>
+        </property>
+        <property name="idPaiement">
+            <column name="idPaiement" sql-type="int(11)"/>
+        </property>
+        <property name="datePaiement">
+            <column name="datePaiement" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>

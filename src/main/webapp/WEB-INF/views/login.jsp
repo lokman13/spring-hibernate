@@ -1,62 +1,49 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Login</title>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1">
+<script>
+    function validate()
+    {
+        var username = document.form.username.value;
+        var password = document.form.password.value;
 
-    <link
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
-            rel="stylesheet">
-
-    <style type="text/css">
-        .modal-footer {
-            border-top: 0px;
+        if (username==null || username=="")
+        {
+            alert("Username cannot be blank");
+            return false;
         }
-    </style>
+        else if(password==null || password=="")
+        {
+            alert("Password cannot be blank");
+            return false;
+        }
+    }
+</script>
 </head>
 <body>
-
-<!--login modal-->
-<div id="loginModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <!-- Header Section -->
-            <div class="modal-header">
-                <h2>Please sign in</h2>
-            </div>
-
-            <!-- Body Section -->
-            <div class="modal-body">
-                <form class="form col-md-12">
-
-                    <input type="text" class="form-control input-lg" placeholder="Email" required autofocus />
-                    <input type="password" class="form-control input-lg" placeholder="Password" required />
-
-                    <label class="checkbox"> <input type="checkbox"
-                                                    value="remember-me" /> Remember me
-                    </label>
-
-                    <button class="btn btn-primary btn-lg btn-block">Sign In</button>
-                </form>
-            </div>
-
-            <!-- Footer Section -->
-            <div class="modal-footer">
-                <div class="col-md-12">
-                    <span class="pull-left"><a href="#">Forgot Password?</a></span>
-                    <span><a href="register">register</a></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<div style="text-align:center"><h1>Connection</h1> </div>
+<br>
+<form name="form" action="LoginServlet" method="post" onsubmit="return validate()">
+    <!-- Do not use table to format fields. As a good practice use CSS -->
+    <table align="center">
+        <tr>
+            <td>Username</td>
+            <td><input type="text" name="username" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" /></td>
+        </tr>
+        <tr> <!-- refer to the video to understand request.getAttribute() -->
+            <td><span style="color:red"><%=(request.getAttribute("errMessage") == null) ? ""
+                    : request.getAttribute("errMessage")%></span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Login"></input><input
+                    type="reset" value="Reset"></input></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

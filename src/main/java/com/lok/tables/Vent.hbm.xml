@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lok.tables.Vent" table="vent" schema="bdd">
+        <id name="idVent">
+            <column name="id_vent" sql-type="int(11)"/>
+        </id>
+        <property name="dateVent">
+            <column name="dateVent" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>

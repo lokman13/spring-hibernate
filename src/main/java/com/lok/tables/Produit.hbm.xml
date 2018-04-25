@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lok.tables.Produit" table="produit" schema="bdd">
+        <id name="idProduit">
+            <column name="idProduit" sql-type="int(11)"/>
+        </id>
+        <property name="idCategorie">
+            <column name="idCategorie" sql-type="int(11)"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="prix">
+            <column name="prix" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="quantité">
+            <column name="quantité" sql-type="int(50)"/>
+        </property>
+        <property name="selectionne">
+            <column name="selectionne" sql-type="int(20)"/>
+        </property>
+        <property name="état">
+            <column name="état" sql-type="varchar(20)" length="20"/>
+        </property>
+    </class>
+</hibernate-mapping>

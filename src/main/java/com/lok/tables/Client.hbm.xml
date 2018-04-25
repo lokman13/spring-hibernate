@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lok.tables.Client" table="client" schema="bdd">
+        <id name="idClient">
+            <column name="idClient" sql-type="int(11)"/>
+        </id>
+        <property name="idVent">
+            <column name="id_vent" sql-type="int(11)"/>
+        </property>
+        <property name="nomClient">
+            <column name="nomClient" sql-type="varchar(25)" length="25"/>
+        </property>
+        <property name="prénomClient">
+            <column name="prénomClient" sql-type="varchar(25)" length="25"/>
+        </property>
+        <property name="emailClient">
+            <column name="emailClient" sql-type="varchar(55)" length="55"/>
+        </property>
+        <property name="adresseClient">
+            <column name="adresseClient" sql-type="text"/>
+        </property>
+        <property name="téléphoneClient">
+            <column name="téléphoneClient" sql-type="int(25)"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(20)" length="20"/>
+        </property>
+    </class>
+</hibernate-mapping>

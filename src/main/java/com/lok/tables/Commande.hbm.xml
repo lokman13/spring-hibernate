@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lok.tables.Commande" table="commande" schema="bdd">
+        <id name="idCommande">
+            <column name="idCommande" sql-type="int(11)"/>
+        </id>
+        <property name="idLivraison">
+            <column name="idLivraison" sql-type="int(11)"/>
+        </property>
+        <property name="idProduit">
+            <column name="idProduit" sql-type="int(11)"/>
+        </property>
+        <property name="dateCommande">
+            <column name="dateCommande" sql-type="date"/>
+        </property>
+        <property name="datelivraison">
+            <column name="datelivraison" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>
